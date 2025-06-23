@@ -1,0 +1,13 @@
+name: ADUXX-ZGLOSZENIA
+version: '1.4'
+main: dev.aduxx.aDUXXZGLOSZENIA.Main
+api-version: '1.21'
+description: System zgłoszeń
+website: dc.lemonhost.pl
+authors: [Aduxx]
+
+commands:
+  zglos:
+    aliases: [report]
+  zglosinfo:
+    aliases: [reportinfo]

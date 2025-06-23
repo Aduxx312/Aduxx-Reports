@@ -1,0 +1,132 @@
+## ADUXX-ZGLOSZENIA
+
+usage: "&cUżycie: /zglos <nick>"
+info-usage: "&2Użycie: /zglosinfo <nick>"
+
+not-found-player: "&cGracz [PLAYER] nie został znaleziony!"
+report-title: "&aZgłosiłeś gracza: &2[PLAYER]"
+admin-report-msg: "&6Nowe zgłoszenie. &fGracz &e[PLAYER] &fzostał zgłoszony za: &c[REASON]"
+config-reload: "&aPrzeładowano config!"
+no-permission-reload: "&7Nie masz &cpermisji!"
+player-reported: "&4Zgłosiłeś gracza [PLAYER] , jeśli zostanie zbanowany dostaniesz powiadomienie"
+self-report: "&cNie możesz zgłosić samego siebie..."
+cooldown: 230 #czas podaje się w sekundach
+cooldown-message: "&7Posiadasz &ccooldown! &7Spróbój &cponownie &7za &c[COOLDOWN] &7sekund"
+bossBarFormat: "&cGracz którego zgłosiłes otzymał bana!"
+bossBarColor: RED
+bossBarStyle: SOLID
+bossBarDuration: 15 # w sekundach
+
+permission: "zgloszenia.admin" #permisja do otrzymywania zgłoszeń
+block-report-permission: "zgloszenia.bypass" #gracz , który posiada tą permisje nie może zostać zgloszony
+config-reload-permission: "zgloszenia.reload" #premisja do przeładowywania config.yml
+cannot-report: "&cTego gracza nie można zgłosić!"
+report-list-permission: "zgloszenia.show" #permisja do listy zgłoszeń
+report-list-messages:
+  - "&8➤ &7Zgłoszenie na &f[PLAYER]"
+  - "&8➤ &7Ilość zgłoszeń na gracza: &f[TIMES]"
+  - "&8➤ &7Ostatnie zgłoszenie [REASON]"
+
+#discord webhook
+webhook:
+  url: ""
+  color: "1807612"
+  report-title: " "
+  report-description: "**🚀Gracz [REPORTER] Zgłosił gracza: [PLAYER] , powód: [REASON]**"
+  report-footer: "System zgłoszeń: dc.lemonhost.pl"
+
+
+gui:
+  size: 45 #(od 9 do 54 slotów)
+  name: "&6&L Zgłoś gracza &f[PLAYER]"
+  slots:
+    0: {item: YELLOW_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    1: {item: ORANGE_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    2: {item: WHITE_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    3: {item: WHITE_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    5: {item: WHITE_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    6: {item: WHITE_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    7: {item: WHITE_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    8: {item: ORANGE_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    9: {item: YELLOW_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    10: {item: ORANGE_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    18: {item: ORANGE_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    19: {item: WHITE_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    21:
+      item: DIAMOND_SWORD
+      name: "&c&LKill Aura"
+      lore:
+        - ""
+        - "&7Gracz korzysta ze wspomagaczy,które"
+        - "&7umożliwiają mu bicie innych graczy dookoła siebie"
+        - ""
+        - "&cJeśli posiadasz nagranie stwórz ticketa na &4discordzie"
+        - ""
+        - "&aKliknij,aby zgłosić"
+    22:
+      item: GOLDEN_SWORD
+      name: "&e&LReach/Hitboxy"
+      lore:
+        - ""
+        - "&7Gracz korzysta ze wspomagaczy,które"
+        - "&7umożliwiają mu bicie z większej odległości"
+        - "&7lub powiększających hitbox innych graczy"
+        - ""
+        - "&cJeśli posiadasz nagranie stwórz ticketa na &4discordzie"
+        - ""
+        - "&aKliknij,aby zgłosić"
+    23:
+      item: TOTEM_OF_UNDYING
+      name: "&6&LAuto Totem"
+      lore:
+        - ""
+        - "&7Gracz korzysta ze wspomagaczy,które"
+        - "&7umożliwiają mu automatyczne zakładanie totemów"
+        - "&7lub zakładanie totemu za pomocą binda"
+        - ""
+        - "&cJeśli posiadasz nagranie stwórz ticketa na &4discordzie"
+        - ""
+        - "&aKliknij,aby zgłosić"
+    24:
+      item: IRON_PICKAXE
+      name: "&d&LFastbreaker/Nuker"
+      lore:
+        - ""
+        - "&7Gracz korzysta ze wspomagaczy,które"
+        - "&7umożliwiają mu szybsze kopanie bloków"
+        - ""
+        - "&cJeśli posiadasz nagranie stwórz ticketa na &4discordzie"
+        - ""
+        - "&aKliknij,aby zgłosić"
+    25:
+      item: COBWEB
+      name: "&f&LBicie przez pajęczyny"
+      lore:
+        - ""
+        - "&7Gracz korzysta ze wspomagaczy,które"
+        - "&7umożliwiają mu bicie innych gracy przez pajęczyny"
+        - ""
+        - "&cJeśli posiadasz nagranie stwórz ticketa na &4discordzie"
+        - ""
+        - "&aKliknij,aby zgłosić"
+    27: {item: WHITE_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    28: {item: ORANGE_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    32:
+      item: PHANTOM_MEMBRANE
+      name: "&b&lInne"
+      lore:
+        - ""
+        - "&7Gracz korzysta z innych nielegalnych wspomagaczy,"
+        - "&7które ułatwiają mu rozgrywkę na serwerze"
+        - ""
+        - "&cJeśli posiadasz nagranie stwórz ticketa na &4discordzie"
+        - ""
+        - "&aKliknij,aby zgłosić"
+    36: {item: ORANGE_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    37: {item: YELLOW_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    38: {item: ORANGE_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    39: {item: WHITE_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    40: {item: WHITE_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    42: {item: WHITE_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    43: {item: WHITE_STAINED_GLASS_PANE, name: " ", lore: [" "]}
+    44: {item: ORANGE_STAINED_GLASS_PANE, name: " ", lore: [" "]}
